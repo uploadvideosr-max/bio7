@@ -86,30 +86,33 @@ body{
   margin-top:22px;
 }
 
-/* Windows logo */
+/* Logo */
 .logo {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: 20px; /* Za levi ugao: left: 20px; */
   width: 50px;
   height: 50px;
   z-index: 1000;
   cursor: pointer;
-  animation: spin 5s linear infinite;
+  /* animation: spin 5s linear infinite;  <-- uklonjeno za statički logo */
 }
 
+/* Ako želite da dodate rotaciju loga, uklonite komentare ispod */
+/*
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+*/
 </style>
 </head>
 
 <body>
 
-<!-- Windows logo -->
+<!-- Vaš logo -->
 <a href="https://www.microsoft.com" target="_blank">
-  <img src="images/windows_logo.png" alt="Windows Logo" class="logo">
+  <img src="images/edfc160d-608b-42ec-b685-d1404131fbf4.png" alt="Balkan Media Logo" class="logo">
 </a>
 
 <div class="container">
