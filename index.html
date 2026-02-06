@@ -23,8 +23,10 @@ body{
 .container{
   max-width:520px;
   width:100%;
+  text-align:center;
 }
 
+/* INTRO LOGO I TEKST */
 .intro{
   background:linear-gradient(90deg,#ff4ecd,#ff7adf);
   padding:22px;
@@ -32,6 +34,16 @@ body{
   text-align:center;
   margin-bottom:20px;
   box-shadow:0 8px 20px rgba(0,0,0,.35);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.intro .logo {
+  width:100px;
+  height:100px;
+  margin-bottom:15px;
+  animation: blink 5s linear infinite;
 }
 
 .intro h1{
@@ -46,6 +58,7 @@ body{
   line-height:1.5;
 }
 
+/* APLIKACIJE */
 .app{
   background:rgba(255,255,255,.1);
   border-radius:16px;
@@ -79,8 +92,14 @@ body{
   text-transform:uppercase;
   text-decoration:none;
   user-select:none;
+  transition:.3s;
 }
 
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* FOOTER */
 .footer{
   text-align:center;
   opacity:.7;
@@ -88,68 +107,57 @@ body{
   margin-top:22px;
 }
 
-/* Logo */
-.logo {
-  position: fixed;
-  top: 20px;
-  right: 20px; /* Za levi ugao: left: 20px; */
-  width: 100px;
-  height: 100px;
-  z-index: 1000;
-  cursor: pointer;
-  animation: blink 5s infinite; /* Treptanje loga */
+/* Animacija treptanja loga */
+@keyframes blink {
+  0%,50%,100% { opacity: 1; }
+  25%,75% { opacity: 0.2; }
 }
 
-/* Animacija treptanja */
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+/* MOBILE */
+@media(max-width:600px){
+  .intro .logo { width:70px; height:70px; }
+  .intro h1 { font-size:22px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Vaš logo -->
-
-  <img src="images/edfc160d-608b-42ec-b685-d1404131fbf4.png" alt="Balkan Media Logo" class="logo">
-</a>
-
 <div class="container">
 
-<div class="intro">
-  <h1>Balkan Media</h1>
-  <p>Ovde možete pronaći naše WINDOWS aplikacije.<br>
-  Kliknite na dugme ispod da započnete preuzimanje.</p>
-</div>
+  <div class="intro">
+    <!-- LOGO iznad naslova -->
+    <img src="images/edfc160d-608b-42ec-b685-d1404131fbf4.png" alt="Balkan Media Logo" class="logo">
+    <h1>Balkan Media</h1>
+    <p>Ovde možete pronaći naše WINDOWS aplikacije.<br>
+    Kliknite na dugme ispod da započnete preuzimanje.</p>
+  </div>
 
-<div class="app">
-  <img src="images/aladin.png" alt="Aladin">
-  <h3>Aladin</h3>
-  <a href="https://primer-link.com/aladin.apk" class="btn" target="_blank">Preuzmi</a>
-</div>
+  <div class="app">
+    <img src="images/aladin.png" alt="Aladin">
+    <h3>Aladin</h3>
+    <a href="https://primer-link.com/aladin.apk" class="btn" target="_blank">Preuzmi</a>
+  </div>
 
-<div class="app">
-  <img src="images/iboplayerpremium.png" alt="IBO Player">
-  <h3>IBO Player Premium</h3>
-  <a href="https://www.megadisk.net/cloud11/index.php/s/iun95LMFYPVpqw6/download" class="btn" target="_blank">Preuzmi</a>
-</div>
+  <div class="app">
+    <img src="images/iboplayerpremium.png" alt="IBO Player">
+    <h3>IBO Player Premium</h3>
+    <a href="https://www.megadisk.net/cloud11/index.php/s/iun95LMFYPVpqw6/download" class="btn" target="_blank">Preuzmi</a>
+  </div>
 
-<div class="app">
-  <img src="images/ibplayerpro.png" alt="IBO Player Pro">
-  <h3>IB Player Pro</h3>
-  <a href="https://www.megadisk.net/cloud11/index.php/s/IFrfjGu2iLqlszn/download" class="btn" target="_blank">Preuzmi</a>
-</div>
+  <div class="app">
+    <img src="images/ibplayerpro.png" alt="IBO Player Pro">
+    <h3>IB Player Pro</h3>
+    <a href="https://www.megadisk.net/cloud11/index.php/s/IFrfjGu2iLqlszn/download" class="btn" target="_blank">Preuzmi</a>
+  </div>
 
+  <div class="app">
+    <img src="images/vuplayerpro.png" alt="VU Player Pro">
+    <h3>VU Player Pro</h3>
+    <a href="https://www.megadisk.net/cloud11/index.php/s/VQLL2aFQvO7ey8d/download" class="btn" target="_blank">Preuzmi</a>
+  </div>
 
-<div class="app">
-  <img src="images/vuplayerpro.png" alt="VU Player Pro">
-  <h3>VU Player Pro</h3>
-  <a href="https://www.megadisk.net/cloud11/index.php/s/VQLL2aFQvO7ey8d/download" class="btn" target="_blank">Preuzmi</a>
-</div>
-
-
-<div class="footer">© Balkan Media</div>
+  <div class="footer">© Balkan Media</div>
 
 </div>
 </body>
